@@ -1,0 +1,34 @@
+{
+  "month": "2026-10",
+  "expected_documents": 2,
+  "documents": [
+    {
+      "id": "sep",
+      "date": "2026-09-30",
+      "pdf": "september.pdf"
+    },
+    {
+      "id": "oct-b",
+      "date": "2026-10-31",
+      "vendor": "Demo Groceries",
+      "total": "7.07",
+      "currency": "EUR",
+      "category": "Food",
+      "pdf": "october-b.pdf"
+    },
+    {
+      "id": "oct-a",
+      "date": "2026-10-01",
+      "vendor": "Demo Supplies",
+      "total": "12.30",
+      "currency": "EUR",
+      "category": "Supplies",
+      "pdf": "october-a.pdf"
+    },
+    {
+      "id": "nov",
+      "date": "2026-11-01",
+      "pdf": "november.pdf"
+    }
+  ]
+}

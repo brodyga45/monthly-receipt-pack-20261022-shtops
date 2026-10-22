@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "month": "2026-10",
+  "metadata_source": "reviewed local manifest; no extraction performed",
+  "expected_documents": 2,
+  "documents": 2,
+  "pdf_pages": 3,
+  "order": "document date, then document ID",
+  "pdf_sha256": "ad9098dd49b9c842dccae3e06b439299cd2b497c23024cde9fe58c20906de9ef",
+  "csv_sha256": "132c31b8eacdc5ac2f216f0ecc96faac1e13601a0dab2a03e69d267fae81fc79",
+  "sources": [
+    {
+      "id": "oct-a",
+      "source_file": "october-a.pdf",
+      "sha256": "fc0697c08f92d4c8f2bda5ce54a0dcab872a29e2601a9df5fd7c9d4f8100ddf8",
+      "pages": 2,
+      "start_page": 1,
+      "end_page": 2
+    },
+    {
+      "id": "oct-b",
+      "source_file": "october-b.pdf",
+      "sha256": "de8f37bda1f036f2078ac53d7d90e1fb7d032a574bd6639b0310f6f2d9dd7752",
+      "pages": 1,
+      "start_page": 3,
+      "end_page": 3
+    }
+  ]
+}
