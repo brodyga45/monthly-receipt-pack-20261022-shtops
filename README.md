@@ -1,15 +1,9 @@
 # Monthly Receipt Pack
 
-A small runnable component for a proposed paid Paperless export integration.
-Given reviewed metadata and local PDFs, it produces one ZIP containing a monthly
-CSV, one PDF with those documents in date/ID order, and a manifest linking every
-row to its PDF page range and source hash. It leaves source files unchanged.
-
-This version reads a local JSON manifest. It has no Paperless server connection,
-OCR, amount/category extraction, hosted UI or customer deployment. It does not
-implement the complete proposed integration and is not a paid delivery. The
-expected document count is supplied by the caller: reconciliation does not prove
-that an upstream export/query was complete. No sales or customer acceptance exist.
+Turn a month of reviewed receipt metadata and local PDFs into one handoff ZIP:
+a spreadsheet, a merged PDF for printing, and a manifest linking each row to its
+pages and source hash. Documents stay in date/ID order, and source files remain
+unchanged.
 
 ## Try the included example
 
@@ -41,12 +35,18 @@ For an existing reviewed manifest:
 python receipt_pack.py reviewed.json ./pdfs ./monthly-pack.zip
 ```
 
-The output must be new; existing output is never replaced. Source PDFs must be
+The output must be new; existing output is preserved. Source PDFs must be
 unencrypted and under the supplied source directory. Missing/invalid inputs stop
-publication. Totals are decimal strings, at most two decimals, and currencies are
-separate columns; no mixed-currency total is manufactured. This is a packaging
-tool, not a PDF security sanitizer or accounting validator. Do not feed untrusted
-PDFs without the usual isolation for document processing.
+publication. Totals are decimal strings with at most two decimals; currencies
+remain separate.
+
+## Scope
+
+Inputs are a local JSON manifest and local PDFs. Amounts and categories are
+already reviewed by the caller. OCR, financial extraction and a Paperless server
+connection are outside this component. The caller also supplies the expected
+document count: matching it checks the local selection, not the completeness of
+an upstream query or archive. This tool packages data rather than certifying it.
 
 The surrounding paid proposal plans to reuse
 [Ildana-ai/paperless-export](https://github.com/Ildana-ai/paperless-export), whose
