@@ -51,8 +51,11 @@ an upstream query or archive. This tool packages data rather than certifying it.
 The surrounding paid proposal plans to reuse
 [Ildana-ai/paperless-export](https://github.com/Ildana-ai/paperless-export), whose
 README and MIT licence were read. This proof contains independently written code;
-it has not copied or integrated that project's source. Upstream adaptation,
-supported-version checks and real-instance acceptance remain future paid scope.
+it has not copied or integrated that project's source. A
+[recorded local Paperless 3.3.3 trial](compatibility/paperless-3.3.3/README.md)
+retrieved reviewed API fields and original PDFs into the unchanged packer; its
+recorded handoff was independently checked. A supported adapter, provider setup
+and real-customer acceptance remain future paid scope.
 
 ## Supported integration
 
