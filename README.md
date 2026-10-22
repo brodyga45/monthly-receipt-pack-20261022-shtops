@@ -56,6 +56,11 @@ supported-version checks and real-instance acceptance remain future paid scope.
 
 ## Supported integration
 
+For help connecting this workflow to one existing Paperless-ngx installation,
+[discuss a supported monthly handoff on Contra](https://contra.com/s/sFcPv6vo-paperless-monthly-receipt-handoff).
+The service is listed at US$350, with a four-working-day delivery target after
+agreement on the version, sample output, supported setup and payment terms.
+
 The component can demonstrate a monthly handoff for users who already review
 their metadata. A supported Paperless connection, field/date mapping and agreed
 output can be scoped separately as paid development. There is no accepted paid
