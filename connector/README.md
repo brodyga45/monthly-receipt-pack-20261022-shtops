@@ -25,6 +25,25 @@ python monthly_handoff.py 2026-10 october-handoff.zip \
   --total-field 7 --category-field 8 --tag-id 5
 ```
 
+To find your instance's field/tag IDs first, run:
+
+```sh
+python inspect_config.py
+```
+
+This command lists custom-field IDs, names and types, plus tag IDs/names. It
+reads only those two metadata collections, without reading document contents,
+downloading PDFs or changing the archive. It uses the same existing authorised
+token; a permission refusal stops the command. Output stays in your local
+terminal and may contain private field/tag names, so do not post it publicly.
+The inspection command refuses all HTTP redirects, including same-origin path
+changes. Point it at the canonical instance URL rather than a redirecting alias.
+Monetary/text types are marked as candidates: you still choose the correct
+meaning and confirm that values are reviewed. Unsupported types are listed
+explicitly. Empty collections stay empty; the command creates no fields/tags.
+Discovery is covered by fictional authenticated HTTP tests, not a second
+observed live Paperless installation run.
+
 Replace the example field/tag IDs with your own configuration. The total field
 must be **monetary**, with values such as `EUR12.30`. The category field must be
 **text**, with reviewed labels such as `Supplies`. The correspondent supplies
@@ -106,7 +125,7 @@ independent review to unobserved customer documents.
 Run the connector's meaningful integration checks with:
 
 ```sh
-python -m unittest -v test_handoff
+python -m unittest -v test_handoff test_inspect_config
 ```
 
 They use a fictional loopback HTTP archive and actual authenticated HTTP GETs,
