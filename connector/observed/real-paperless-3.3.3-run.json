@@ -1,0 +1,64 @@
+{
+  "at_utc": "2026-10-23T02:31:50.079776+00:00",
+  "result": "PASS",
+  "application": "Paperless-ngx3.3.3 official cached image in own isolated shtops VM",
+  "synthetic_documents": 4,
+  "selected_documents": 2,
+  "pdf_pages": 3,
+  "new_connector_entrypoint_ran": true,
+  "new_customer_or_owner_data": false,
+  "archive_reads_and_original_downloads_only": true,
+  "fixture_only_login_token_created": true,
+  "no_token_persisted_in_evidence": true,
+  "fields": {
+    "total": 1,
+    "category": 2
+  },
+  "output_file": "real-paperless-3.3.3-october.zip",
+  "output_sha256": "be87379090ebeac3291a2e98e4836175ee2108c28cff6227013dec0884222e4f",
+  "pdf_sha256": "ad9098dd49b9c842dccae3e06b439299cd2b497c23024cde9fe58c20906de9ef",
+  "rows": [
+    {
+      "vendor": "Demo Supplies",
+      "date": "2026-10-01",
+      "total": "12.30",
+      "currency": "EUR",
+      "category": "Supplies",
+      "document_id": "3",
+      "pdf_start_page": "1",
+      "pdf_end_page": "2"
+    },
+    {
+      "vendor": "Demo Groceries",
+      "date": "2026-10-31",
+      "total": "7.07",
+      "currency": "EUR",
+      "category": "Food",
+      "document_id": "2",
+      "pdf_start_page": "3",
+      "pdf_end_page": "3"
+    }
+  ],
+  "selection": {
+    "month": "2026-10",
+    "query": {
+      "created__date__gte": "2026-10-01",
+      "created__date__lt": "2026-11-01",
+      "ordering": "created,id",
+      "page_size": "100",
+      "truncate_content": "true"
+    },
+    "api_documents": 2,
+    "selected_document_ids": [
+      2,
+      3
+    ],
+    "total_field_id": 1,
+    "category_field_id": 2,
+    "pdf_version": "original",
+    "downloaded_bytes": 4545,
+    "selection_rechecked_after_download": true,
+    "limits": "Two reads matched; not an atomic snapshot or proof of accounting completeness. Metadata supplied by the archive, not extracted or certified."
+  },
+  "limits": "One local synthetic3.3.3 instance; not provider/customer acceptance, arbitrary versions or accounting correctness."
+}

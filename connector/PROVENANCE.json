@@ -1,0 +1,44 @@
+{
+  "at_utc": "2026-10-23T02:35:28.222671+00:00",
+  "own_connector": "monthly_handoff.py",
+  "base_packer_unchanged_sha256": "290c45ae1df9b2765350383f3a85040873df1704740ffc58a1fb0bff1848a63a",
+  "upstream": {
+    "repository": "https://github.com/Ildana-ai/paperless-export",
+    "version": "0.4.0",
+    "git_blob": "68b416667b89280fe57cdc03ecbeae49fb264fb0",
+    "sha256": "64ccc4c84ed6f68238aa9e8b85571fb192c5ec68aaae2ca41e629414e5c69dfa",
+    "licence": "MIT; retained unchanged"
+  },
+  "new_components": "Reusable connector, HTTP tests and documentation; no browser UI/runtime/Sites card or blocked rental source included",
+  "test_evidence": {
+    "suite": "python -m unittest -v test_handoff",
+    "terminal_session": 29118,
+    "exit": 0,
+    "tests": 6,
+    "negative_modes_in_one_parameterised_case": 9,
+    "earlier_failure": "Damaged PDF raised uncaught PdfReadError; corrected in wrapper and suite rerun passed.",
+    "not_existing_core_suite_rerun": true
+  },
+  "real_application": {
+    "entrypoint": "monthly_handoff.main with real HTTP to own retained isolated3.3.3 fixture; not a stub",
+    "run_session": 58142,
+    "exit": 0,
+    "image_digest": "sha256:dba0242c1df1843643df4eb50ce5639f3a7900f414879088fd5bed8eaf2d456d",
+    "retained_documents": 4,
+    "selected": 2,
+    "pdf_pages": 3,
+    "merged_pdf_sha256": "ad9098dd49b9c842dccae3e06b439299cd2b497c23024cde9fe58c20906de9ef",
+    "same_as_previously_rendered_pdf": true
+  },
+  "runtime_cleanup": {
+    "container_stop_session": 4072,
+    "container_stop_exit": 0,
+    "VM_stop_session": 98474,
+    "VM_stop_exit": 0,
+    "observed": "Own2containers stopped and VZ state stopped; instance colima-shtops shut down.",
+    "notes": "Existing profile only; one fixture directory mounted. Colima recreated its named context; Docker operations used explicit own UNIX socket because old temporary context was absent. Startup routine binfmt provisioning was displayed; no explicit image pull performed by this test."
+  },
+  "credential_scope": "Existing fictional local lab user; one local API token obtained for real wrapper test. Client token only in process environment; normal server token storage remains in disposable fixture database. No owner/third-party credential changed; no token, lab .env or database included.",
+  "commercial": "Unpaid generic product readiness, not a commissioned EDNT/Paperless-home/Contra integration, customer deployment, delivery acceptance or payment.",
+  "publication": "Local candidate pending independent review. Specific prior browser/rental publication refusals retained; no new publication attempted."
+}
